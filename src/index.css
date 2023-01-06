@@ -1,0 +1,48 @@
+main {
+  width: 15em;
+  margin: 5vh auto;
+  font-size: 1.5em;
+  font-family: emoji;
+}
+button {
+  font-size: 1.5em;
+  font-family: cursive;
+  width: 33.33%;
+  cursor: pointer;
+}
+
+.display-container {
+  text-align: right;
+  padding: 1em;
+  background: #141414;
+  color: white;
+  font-family: fantasy;
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+.keypad-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "function function function operator"
+    "numpad numpad numpad operator";
+}
+
+.function-container {
+  grid-area: function;
+}
+.numpad-container {
+  grid-area: numpad;
+  display: flex;
+  flex-flow: wrap-reverse;
+}
+.key-0 {
+  width: 66.66%;
+}
+
+.operator-container {
+  grid-area: operator;
+}
+.operator-container button {
+  width: 100%;
+}
